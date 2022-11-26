@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { NewsContext } from './NewsContext'
-import NewsArticle from './NewsArticle';
+import { NewsContext } from '../Components/NewsContext'
+import NewsArticle from '../Components/NewsArticle';
 import { Oval } from 'react-loader-spinner'
 
 

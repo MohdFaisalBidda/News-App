@@ -6,7 +6,7 @@ export const NewsContext = createContext();
 export const NewsContextProvider = (props) => {
 
     const [data, setData] = useState();
-    const apikey = "29cf5de29810421aaf5a7fc077f78066";
+    const apikey ="29cf5de29810421aaf5a7fc077f78066";
 
     useEffect(() => {
         axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}
