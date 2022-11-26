@@ -1,7 +1,7 @@
 import "./App.css"
 import NavBar from "./Components/NavBar";
 import News from "./Components/News";
-import NewsContextProvider from "./NewsContext";
+import NewsContextProvider from "./Components/NewsContext";
 
 const App = () => {
   return (
