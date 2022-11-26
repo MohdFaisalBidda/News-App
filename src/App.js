@@ -1,10 +1,12 @@
 import "./App.css"
+import NavBar from "./Components/NavBar";
 import News from "./Components/News";
 import NewsContextProvider from "./NewsContext";
 
 const App = () => {
   return (
-    <NewsContextProvider>
+    <NewsContextProvider >
+      <NavBar/>
       <News />
     </NewsContextProvider>
 
