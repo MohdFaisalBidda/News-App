@@ -6,11 +6,10 @@ export const NewsContext = createContext();
 export const NewsContextProvider = (props) => {
 
     const [data, setData] = useState();
-    const apikey ="29cf5de29810421aaf5a7fc077f78066";
+    const apikey = "433d61513ff53bf0fd7d61b1550a3e0a";
 
     useEffect(() => {
-        axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}
-        `).then((res) => setData(res.data)).catch((err) => console.log(err))
+        axios.get(`https://gnews.io/api/v4/top-headlines?token=${apikey}&country=in&lang=en&topic=breaking-news`).then((res) => setData(res.data)).catch((err) => console.log(err))
     }, [])
 
     return (

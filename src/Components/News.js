@@ -11,8 +11,8 @@ function News(props) {
             {data ? data.articles.map((news, index) => {
                 return <div className=''>
 
-                    <NewsArticle title={news.title} description={news.description} author={news.author}
-                        urlToImage={news.urlToImage} publishedAt={news.publishedAt} url={news.url} key={index} />
+                    <NewsArticle title={news.title} description={news.description} author={news.source.name}
+                        urlToImage={news.image} publishedAt={news.publishedAt} url={news.url} key={index} />
                 </div>
 
             }) : <Oval
