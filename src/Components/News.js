@@ -7,7 +7,7 @@ import { Oval } from 'react-loader-spinner'
 function News(props) {
     const { data } = useContext(NewsContext)
     return (
-        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-36 sm:px-0 justify-center  my-10 md:px-20 px-20 text-center'>
+        <div className='grid sm:grid-cols-2 md:grid-cols-3 sm:px-10 sm:gap-10 justify-center px-2 my-10 text-center xl:gap-40 lg:place-content-center'>
             {data ? data.articles.map((news, index) => {
                 return <div className=''>
 
@@ -15,20 +15,21 @@ function News(props) {
                         urlToImage={news.image} publishedAt={news.publishedAt} url={news.url} key={index} />
                 </div>
 
-            }) : <Oval
-                className=""
+            }) : <div className='lg:grid lg:place-content-center'>
+                <Oval
                 height={80}
                 width={80}
                 color="#808080"
                 wrapperStyle={{}}
-                wrapperClass=""
+                wrapperClass="text-center"
                 visible={true}
                 ariaLabel='oval-loading'
                 secondaryColor="#808080"
                 strokeWidth={2}
                 strokeWidthSecondary={2}
 
-            />}
+            />
+            </div>}
         </div>
     )
 }
