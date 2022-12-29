@@ -8,14 +8,15 @@ function News(props) {
     const { data } = useContext(NewsContext)
     return (
         <div className='grid sm:grid-cols-2 md:grid-cols-3 sm:px-10 sm:gap-10 justify-center px-2 my-10 text-center xl:gap-40 lg:place-content-center'>
-            {data ? data.articles.map((news, index) => {
-                return <div className=''>
+            {data && data.articles.map((news, index) => {
+                return (<div key={index} className=''>
 
                     <NewsArticle title={news.title} description={news.description} author={news.source.name}
                         urlToImage={news.image} publishedAt={news.publishedAt} url={news.url} key={index} />
-                </div>
+                </div>)
 
-            }) : <div className='lg:grid lg:place-content-center'>
+            })}
+            {!data && ( <div className='xl:fixed xl:top-1/2 xl:left-1/2 '>
                 <Oval
                 height={80}
                 width={80}
@@ -29,7 +30,7 @@ function News(props) {
                 strokeWidthSecondary={2}
 
             />
-            </div>}
+            </div>)}
         </div>
     )
 }
